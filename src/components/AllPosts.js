@@ -25,8 +25,8 @@ export default function AllPosts() {
 
   return (
     <div>
-      <h2>Blog Posts</h2>
-      <h3>Welcome to my blog posts page!</h3>
+      <h2>Stella och Malin i Taiwan</h2>
+      <h3>Häng med oss på en utbytestermin på NTU!</h3>
       <div>
         {allPostsData &&
           allPostsData.map((post, index) => (
