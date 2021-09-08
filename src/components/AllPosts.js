@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
+import DefaultLayout from "./layouts/DefaultLayout.js";
+import '../styles/style.scss'
 
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
@@ -24,14 +26,11 @@ export default function AllPosts() {
   }, []);
 
   return (
-    <div>
-      <header>
-        <h2>Stella och Malin i Taiwan</h2>
-      </header>
+    <DefaultLayout>
       <div className="post-grid">
         {allPostsData &&
           allPostsData.map((post, index) => (
-            <div className="blog-post">
+            <div className="blog-post-card">
             <Link to={"/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
                 <img src={post.mainImage.asset.url} alt="" />
@@ -43,6 +42,6 @@ export default function AllPosts() {
             </div>
           ))}
       </div>
-    </div>
+    </DefaultLayout>
   );
 }

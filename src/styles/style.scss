@@ -35,7 +35,7 @@ header {
     flex-wrap: nowrap;
     position: relative;
 
-    .blog-post {
+    .blog-post-card {
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
         transition: all .2s ease-out;
         border: solid 1px black;
@@ -59,6 +59,72 @@ header {
             transform: translateY(-10px);
             transition: ease-in-out .3s;
         }
+    }
+}
+
+.navlink {
+    text-decoration: none;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+}
+
+.blog-post {
+    max-width: 80vw;
+    background-color: ghostwhite;
+    border: solid 1px black;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+
+    h2 {
+        text-align: center;
+        color: $header-text-color;
+        margin-bottom: 0;
+    }
+
+    .date {
+        font-size: .7em;
+        text-align: center;
+        padding: -10px;
+    }
+    
+
+    img {
+        display:inline-block;
+    }
+
+    .content {
+        display: flex;
+        padding: 1em;
+        justify-content: center;
+        flex-direction: column  ;
+    }
+}
+
+.author-footer {
+    padding: 10px;
+    border-top: solid 1px $header-text-color;
+    align-content: flex-end;
+    position: relative;
+
+    .author-holder {
+        margin-left: auto; 
+        margin-right: 0;
+        max-width: fit-content;
+    }
+
+    .photo {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    h4 {
+        margin: 0;
+
     }
 }
 

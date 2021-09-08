@@ -3,6 +3,10 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
+import DefaultLayout from "./layouts/DefaultLayout.js";
+import '../styles/style.scss';
+
+
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -19,6 +23,7 @@ export default function Post() {
         `*[slug.current == $slug]{
           title,
           slug,
+          publishedAt,
           mainImage{
             asset->{
               _id,
@@ -37,26 +42,33 @@ export default function Post() {
 
   if (!postData) return <div>Loading...</div>;
 
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+  const date = new Date(postData.publishedAt).toLocaleDateString("sv-SE", options);
+
+
   return (
-    <div>
-      <div>
-        <h2>{postData.title}</h2>
-        <div>
-          <img
-            src={urlFor(postData.authorImage).width(100).url()}
-            alt="Author is Kap"
-          />
-          <h4>{postData.name}</h4>
+    <DefaultLayout>
+        <div className="blog-post">
+            <h2>{postData.title}</h2>
+            <p className="date">{date}</p>
+            <div className="content">
+                <img src={urlFor(postData.mainImage).url()} alt="" />
+                <BlockContent
+                blocks={postData.body}
+                projectId={sanityClient.clientConfig.projectId}
+                dataset={sanityClient.clientConfig.dataset}
+                />
+            </div>
+            <div className="author-footer">
+                <div className="author-holder">
+                <img className="photo"
+                    src={urlFor(postData.authorImage).width(100).url()}
+                    alt="Author is Kap"
+                />
+                <h4>{postData.name}</h4>
+                </div>
+            </div>
         </div>
-      </div>
-      <img src={urlFor(postData.mainImage).width(200).url()} alt="" />
-      <div>
-        <BlockContent
-          blocks={postData.body}
-          projectId={sanityClient.clientConfig.projectId}
-          dataset={sanityClient.clientConfig.dataset}
-        />
-      </div>
-    </div>
+    </DefaultLayout>
   );
 }
