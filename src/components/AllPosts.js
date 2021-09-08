@@ -25,11 +25,13 @@ export default function AllPosts() {
 
   return (
     <div>
-      <h2>Stella och Malin i Taiwan</h2>
-      <h3>Häng med oss på en utbytestermin på NTU!</h3>
-      <div>
+      <header>
+        <h2>Stella och Malin i Taiwan</h2>
+      </header>
+      <div className="post-grid">
         {allPostsData &&
           allPostsData.map((post, index) => (
+            <div className="blog-post">
             <Link to={"/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
                 <img src={post.mainImage.asset.url} alt="" />
@@ -38,6 +40,7 @@ export default function AllPosts() {
                 </span>
               </span>
             </Link>
+            </div>
           ))}
       </div>
     </div>

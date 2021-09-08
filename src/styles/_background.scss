@@ -1,0 +1,13 @@
+
+.curve {
+    aspect-ratio: 900/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .waves {
+        background-image: url('./images/waves.svg');
+    }
+}
+
