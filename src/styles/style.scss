@@ -1,6 +1,7 @@
 @import "_variables";
 @import "_footer";
 @import "_background";
+@import "_blog-post";
 
 body {
     font-family: $main-font;
@@ -26,33 +27,47 @@ header {
     text-align: left;
     font-size: 3em;
     h2 {
-        text-shadow: -5px 3px white;
+        text-shadow: -5px 3px antiquewhite;
     }
 }
 
 .post-grid {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     position: relative;
+    justify-content: center;
+
+    .post-grid-child-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 
     .blog-post-card {
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
         transition: all .2s ease-out;
         border: solid 1px black;
-        margin: 0 10px 10px 10px;
+        margin: 10px 10px 10px 10px;
         padding: 5px;
         text-align: center;
+        background-color: antiquewhite;
 
         a {
-            color: $link-color;
-            font-size: .8em;
+            color: $header-text-color;
+            font-size: .7em;
             text-decoration: none;
         }
 
         img {
             width: 300px;
             height: 300px;
+            max-width: 400px;
             object-fit: cover;
+        }
+
+        .date {
+            font-family: "Share Tech Mono";
+            font-size: 1.5em;
         }
 
         &:hover {
@@ -70,38 +85,6 @@ header {
     }
 }
 
-.blog-post {
-    max-width: 80vw;
-    background-color: ghostwhite;
-    border: solid 1px black;
-    overflow: hidden;
-    position: relative;
-    padding: 10px;
-
-    h2 {
-        text-align: center;
-        color: $header-text-color;
-        margin-bottom: 0;
-    }
-
-    .date {
-        font-size: .7em;
-        text-align: center;
-        padding: -10px;
-    }
-    
-
-    img {
-        display:inline-block;
-    }
-
-    .content {
-        display: flex;
-        padding: 1em;
-        justify-content: center;
-        flex-direction: column  ;
-    }
-}
 
 .author-footer {
     padding: 10px;

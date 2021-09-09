@@ -1,5 +1,5 @@
 import React from "react";
-//import Footer from "components/Footer";
+import Footer from "../Footer";
 import '../../styles/style.css';
 import Header from "../Header";
 
@@ -10,7 +10,7 @@ const DefaultLayout = ({children}) => {
             <div>
                 {children}
             </div>
-            {/* <Footer /> */}
+            {<Footer />}
         </div>
     )
 }

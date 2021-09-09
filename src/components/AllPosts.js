@@ -10,9 +10,10 @@ export default function AllPosts() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "post"] | order(publishedAt desc) {
         title,
         slug,
+        publishedAt,
         mainImage{
           asset->{
           _id,
@@ -25,9 +26,17 @@ export default function AllPosts() {
       .catch(console.error);
   }, []);
 
+  function formatDate(computerDate) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(computerDate).toLocaleDateString("sv-SE", options);
+    
+    return date;
+  }
+
   return (
     <DefaultLayout>
       <div className="post-grid">
+        <div className="post-grid-child-container">
         {allPostsData &&
           allPostsData.map((post, index) => (
             <div className="blog-post-card">
@@ -38,9 +47,11 @@ export default function AllPosts() {
                   <h2>{post.title}</h2>
                 </span>
               </span>
+              <span className="date">{formatDate(post.publishedAt)}</span>
             </Link>
             </div>
           ))}
+        </div>
       </div>
     </DefaultLayout>
   );

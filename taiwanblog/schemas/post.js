@@ -48,6 +48,13 @@ export default {
       type: 'blockContent',
     },
   ],
+  orderings: [
+    {
+      title: "Date",
+      name: "date",
+      by: [{ field: "date", direction: "asc" }],
+    },
+  ],
 
   preview: {
     select: {
