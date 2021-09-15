@@ -52,8 +52,9 @@ export default function Post() {
             <h2>{postData.title}</h2>
             <p className="date">{date}</p>
             <div className="content">
-                <img src={urlFor(postData.mainImage).url()} alt="" />
-                <BlockContent
+                <img className="main-image" src={urlFor(postData.mainImage).url()} alt="" />
+                <BlockContent 
+                className="content"
                 blocks={postData.body}
                 projectId={sanityClient.clientConfig.projectId}
                 dataset={sanityClient.clientConfig.dataset}

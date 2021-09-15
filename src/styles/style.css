@@ -51,22 +51,22 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.blog-post .content figure {
-  -webkit-margin-start: 0;
-          margin-inline-start: 0;
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
+.blog-post .content figure img {
+  width: 500px;
 }
 
-.blog-post .content figure img {
-  display: inline-block;
+.blog-post .content .main-image {
   width: 500px;
+  display: inline-block;
 }
 
 body {
