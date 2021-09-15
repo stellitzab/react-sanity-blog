@@ -17,7 +17,6 @@
         font-size: .7em;
         text-align: center;
     }
-    
 
     img {
         display: inline-block;
@@ -27,15 +26,20 @@
         display: flex;
         padding: 1em;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
 
         figure {
-            margin-inline-start: 0;
-            margin-inline-end: 0;
+            
             img {
-                display: inline-block;
+                //display: inline-block;
                 width: 500px;
             }
+        }
+
+        .main-image {
+            width: 500px;
+            display: inline-block;
         }
 
     }
