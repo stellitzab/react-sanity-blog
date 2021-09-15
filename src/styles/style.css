@@ -68,6 +68,7 @@
 }
 
 .blog-post .content figure img {
+  display: inline-block;
   width: 500px;
 }
 
