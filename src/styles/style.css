@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Urbanist:wght@300&display=swap");
 .footer {
-  height: 10vh;
-  background-image: url("./images/waves.svg");
-  background-color: green;
+  min-height: 300px;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
   color: white;
   text-align: center;
 }
@@ -29,10 +29,11 @@
   background-color: antiquewhite;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  border: solid 3px #465348;
+  border: solid 1px #465348;
   overflow: hidden;
   position: relative;
   padding: 10px;
+  margin: auto;
 }
 
 .blog-post h2 {
@@ -42,7 +43,7 @@
 }
 
 .blog-post .date {
-  font-size: .7em;
+  font-size: .9em;
   text-align: center;
 }
 
@@ -69,41 +70,21 @@
 
 .blog-post .content figure img {
   display: inline-block;
-  width: 500px;
+  width: 600px;
 }
 
 .blog-post .content .main-image {
-  width: 500px;
+  width: 600px;
   display: inline-block;
 }
 
-body {
-  font-family: "Rubik", sans-serif;
-  background-color: #FFC58F;
-  margin: 0 5% 0 5%;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: .7em;
-}
-
-header {
-  color: #465348;
-  text-align: left;
-  font-size: 3em;
-}
-
-header h2 {
-  text-shadow: -5px 3px antiquewhite;
+@media screen and (max-width: 700px) and (min-width: 300px) {
+  .blog-post .content img {
+    width: 80vw;
+  }
+  .blog-post .content p {
+    width: 80vw;
+  }
 }
 
 .post-grid {
@@ -136,7 +117,7 @@ header h2 {
   transition: all .2s ease-out;
   border: solid 1px black;
   margin: 10px 10px 10px 10px;
-  padding: 5px;
+  padding: 5px 5px 15px 5px;
   text-align: center;
   background-color: antiquewhite;
   max-width: 300px;
@@ -166,6 +147,52 @@ header h2 {
           transform: translateY(-10px);
   -webkit-transition: ease-in-out .3s;
   transition: ease-in-out .3s;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #FFC58F;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  background-image: url("./images/waves.svg");
+  background-repeat: no-repeat;
+  background-position: 10%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.main-content {
+  padding-bottom: 300px;
+  margin: 0 5% 0 5%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: .7em;
+}
+
+p {
+  font-family: "Kaisei Tokumin", serif;
+  line-height: 1.4;
+}
+
+header {
+  color: #465348;
+  text-align: left;
+  font-size: 3em;
+  margin: 0 5% 0 5%;
+}
+
+header h2 {
+  text-shadow: -5px 3px antiquewhite;
 }
 
 .navlink {

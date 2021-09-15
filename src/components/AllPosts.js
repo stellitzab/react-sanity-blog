@@ -45,9 +45,10 @@ export default function AllPosts() {
                 <img src={post.mainImage.asset.url} alt="" />
                 <span>
                   <h2>{post.title}</h2>
+                  <span className="date">{formatDate(post.publishedAt)}</span>
+                  <span className="author">{toString(post.author)}</span>
                 </span>
               </span>
-              <span className="date">{formatDate(post.publishedAt)}</span>
             </Link>
             </div>
           ))}
