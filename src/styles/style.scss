@@ -13,7 +13,10 @@ body {
     background-image: url('./images/waves.svg');
     background-repeat: no-repeat;
     background-position: 10%;
+    -webkit-background-position: 10%;
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -webkit-background-size: cover;
     background-size: cover;
 }
 
@@ -48,6 +51,13 @@ header {
     h2 {
         text-shadow: -5px 3px antiquewhite;
     }
+
+    @media screen and (max-width: $mobile-screen) {
+        h2 {
+            font-size: 1.2em;
+            margin: 10%;
+        }   
+    }
 }
 
 .navlink {
@@ -80,6 +90,7 @@ header {
 
     h4 {
         margin: 0;
+        font-family: $body-font;
 
     }
 }

@@ -55,4 +55,31 @@
             }
         }
     }
+    
+    .author-footer {
+        padding: 10px;
+        border-top: solid 1px $header-text-color;
+        align-content: flex-end;
+        position: relative;
+    
+        .author-holder {
+            margin-left: auto; 
+            margin-right: 0;
+            max-width: fit-content;
+        }
+    
+        .photo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    
+        h4 {
+            margin: 0;
+            font-family: $body-font;
+    
+        }
+    }
+    
 }

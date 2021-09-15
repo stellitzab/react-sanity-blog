@@ -14,6 +14,7 @@ export default function AllPosts() {
         title,
         slug,
         publishedAt,
+        "name": author->name,
         mainImage{
           asset->{
           _id,
@@ -46,7 +47,9 @@ export default function AllPosts() {
                 <span>
                   <h2>{post.title}</h2>
                   <span className="date">{formatDate(post.publishedAt)}</span>
-                  <span className="author">{toString(post.author)}</span>
+                  <br />
+                  <span className="author">{post.name}</span>
+
                 </span>
               </span>
             </Link>
