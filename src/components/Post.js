@@ -38,9 +38,21 @@ export default function Post() {
       )
       .then((data) => setPostData(data[0]))
       .catch(console.error);
-  }, [slug]);
+  }, [slug]); 
 
-  if (!postData) return <div>Loading...</div>;
+  /*
+  function checkData() {
+    if (!postData) {
+      setTimeout(checkData, 5000)
+    }
+    else {
+      return
+    }
+  }
+
+  checkData() */
+
+  if(!postData) return <div> </div>
 
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
   const date = new Date(postData.publishedAt).toLocaleDateString("sv-SE", options);
@@ -56,15 +68,15 @@ export default function Post() {
                 <BlockContent 
                 className="content"
                 blocks={postData.body}
-                projectId={sanityClient.clientConfig.projectId}
-                dataset={sanityClient.clientConfig.dataset}
+                projectId={sanityClient.config().projectId}
+                dataset={sanityClient.config().dataset}
                 />
             </div>
             <div className="author-footer">
                 <div className="author-holder">
                 <img className="photo"
                     src={urlFor(postData.authorImage).width(100).url()}
-                    alt="Author is Kap"
+                    alt={"image of" + postData.name}
                 />
                 <h4>{postData.name}</h4>
                 </div>

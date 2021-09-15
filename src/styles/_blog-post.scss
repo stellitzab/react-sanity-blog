@@ -34,6 +34,12 @@
             img {
                 display: inline-block;
                 width: 600px;
+
+                @media screen and (max-width: $mobile-screen) {
+
+                    width: 80vw;
+        
+                }
             }
         }
 
@@ -43,10 +49,11 @@
         }
 
         @media screen and (max-width: $mobile-screen) {
-            img {
+
+            .main-image {
                 width: 80vw;
             }
-            
+
             p {
                 width: 80vw;
             }
