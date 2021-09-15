@@ -1,5 +1,6 @@
 .blog-post {
-    max-width: 80vw;
+    width: 80vw;
+    max-width: 1000px;
     background-color: antiquewhite;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     border: solid 1px #465348;
@@ -39,9 +40,7 @@
                 width: 600px;
 
                 @media screen and (max-width: $mobile-screen) and (min-width: 300px) {
-
                     width: 80vw;
-        
                 }
             }
         }
@@ -58,11 +57,16 @@
             }
 
             p {
-                width: 80vw;
+                width: 75vw;
+                font-size: 0.9em;
             }
         }
+
+        @media screen and (min-width: 1050px) {
+            margin: 0 8vw;
+        }
     }
-    
+
     .author-footer {
         padding: 10px;
         border-top: solid 1px $header-text-color;
