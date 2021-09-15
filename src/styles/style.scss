@@ -2,12 +2,27 @@
 @import "_footer";
 @import "_background";
 @import "_blog-post";
+@import "_post-grid";
 
 body {
     font-family: $main-font;
     background-color: $bg-color;
-    margin: 0 5% 0 5%; 
+    margin: 0;
     min-height: 100vh;
+    position: relative;
+    background-image: url('./images/waves.svg');
+    background-repeat: no-repeat;
+    background-position: 10%;
+    -webkit-background-position: 10%;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.main-content {
+    padding-bottom: 300px;
+    margin: 0 5% 0 5%;
 }
 
 h1 {
@@ -22,58 +37,26 @@ h3 {
     font-size: .7em;
 }
 
+p {
+    font-family: $body-font;
+    line-height: 1.4;
+}
+
 header {
     color: $header-text-color;
     text-align: left;
     font-size: 3em;
+    margin: 0 5% 0 5%;
+
     h2 {
         text-shadow: -5px 3px antiquewhite;
     }
-}
 
-.post-grid {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-
-    .post-grid-child-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .blog-post-card {
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-        transition: all .2s ease-out;
-        border: solid 1px black;
-        margin: 10px 10px 10px 10px;
-        padding: 5px;
-        text-align: center;
-        background-color: antiquewhite;
-
-        a {
-            color: $header-text-color;
-            font-size: .7em;
-            text-decoration: none;
-        }
-
-        img {
-            width: 300px;
-            height: 300px;
-            max-width: 400px;
-            object-fit: cover;
-        }
-
-        .date {
-            font-family: "Share Tech Mono";
-            font-size: 1.5em;
-        }
-
-        &:hover {
-            transform: translateY(-10px);
-            transition: ease-in-out .3s;
-        }
+    @media screen and (max-width: $mobile-screen) {
+        h2 {
+            font-size: 1.2em;
+            margin: 10%;
+        }   
     }
 }
 
@@ -107,6 +90,7 @@ header {
 
     h4 {
         margin: 0;
+        font-family: $body-font;
 
     }
 }

@@ -2,25 +2,28 @@
     max-width: 80vw;
     background-color: antiquewhite;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    border: solid 3px #465348;
+    border: solid 1px #465348;
     overflow: hidden;
     position: relative;
     padding: 10px;
+    margin: auto;
 
     h2 {
         text-align: center;
         color: $header-text-color;
         margin-bottom: 0;
     }
+    
 
     .date {
-        font-size: .7em;
+        font-size: .9em;
         text-align: center;
     }
 
     img {
         display: inline-block;
     }
+    
 
     .content {
         display: flex;
@@ -35,7 +38,7 @@
                 display: inline-block;
                 width: 600px;
 
-                @media screen and (max-width: $mobile-screen) {
+                @media screen and (max-width: $mobile-screen) and (min-width: 300px) {
 
                     width: 80vw;
         
@@ -48,7 +51,7 @@
             display: inline-block;
         }
 
-        @media screen and (max-width: $mobile-screen) {
+        @media screen and (max-width: $mobile-screen) and (min-width: 300px) {
 
             .main-image {
                 width: 80vw;
@@ -59,4 +62,31 @@
             }
         }
     }
+    
+    .author-footer {
+        padding: 10px;
+        border-top: solid 1px $header-text-color;
+        align-content: flex-end;
+        position: relative;
+    
+        .author-holder {
+            margin-left: auto; 
+            margin-right: 0;
+            max-width: fit-content;
+        }
+    
+        .photo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    
+        h4 {
+            margin: 0;
+            font-family: $body-font;
+    
+        }
+    }
+    
 }

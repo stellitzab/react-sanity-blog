@@ -1,0 +1,46 @@
+.post-grid {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+
+    .post-grid-child-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .blog-post-card {
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        transition: all .2s ease-out;
+        border: solid 1px black;
+        margin: 10px 10px 10px 10px;
+        padding: 5px 5px 15px 5px;
+        text-align: center;
+        background-color: antiquewhite;
+        max-width: 300px;
+
+        a {
+            color: $header-text-color;
+            font-size: .7em;
+            text-decoration: none;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            max-width: 400px;
+            object-fit: cover;
+        }
+
+        .date {
+            font-family: "Share Tech Mono";
+            font-size: 1.5em;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+            transition: ease-in-out .3s;
+        }
+    }
+}
