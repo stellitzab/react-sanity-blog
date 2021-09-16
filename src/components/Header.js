@@ -5,7 +5,7 @@ const Header = () =>  {
     return (
         <NavLink to='/' style={{textDecoration: "none"}} className="navlink">
             <header>
-                <h2>Stella och Malin i Taiwan</h2>
+                <h2>Malin och Stella i Taiwan</h2>
             </header>
         </NavLink>
 
