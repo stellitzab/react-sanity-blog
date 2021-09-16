@@ -75,7 +75,7 @@ export default function Post() {
             <div className="author-footer">
                 <div className="author-holder">
                 <img className="photo"
-                    src={urlFor(postData.authorImage).width(100).url()}
+                    src={urlFor(postData.authorImage).url()}
                     alt={"image of" + postData.name}
                 />
                 <h4>{postData.name}</h4>
