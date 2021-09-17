@@ -6,7 +6,8 @@ import OnePost from "./components/Post.js";
 //import Background from "./components/Background.js";
 import './styles/style.css';
 import './images/waves.svg';
-import AllPostsByAuthor from './components/AllPostsByAuthor';
+//import AllPostsByAuthor from './components/AllPostsByAuthor';
+import AuthorPage from './components/AuthorPage';
 
 
 
@@ -15,7 +16,7 @@ function App() {
     <BrowserRouter>
         <Route component={AllPosts} path="/" exact />
         <Route component={OnePost} path="/:slug" />
-        <Route component={AllPostsByAuthor} path="/author" />
+        <Route component={AuthorPage} path="/author/:name" />
     </BrowserRouter>
   );
 }

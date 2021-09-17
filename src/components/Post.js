@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
@@ -64,7 +64,6 @@ export default function Post() {
             <h2>{postData.title}</h2>
             <p className="date">{date}</p>
             <div className="content">
-                <img className="main-image" src={urlFor(postData.mainImage).url()} alt="" />
                 <BlockContent 
                 className="content"
                 blocks={postData.body}
@@ -73,13 +72,15 @@ export default function Post() {
                 />
             </div>
             <div className="author-footer">
+              <NavLink to={'/author/' + postData.name} style={{textDecoration: "none"}} className="navlink">
                 <div className="author-holder">
                 <img className="photo"
-                    src={urlFor(postData.authorImage).url()}
+                    src={urlFor(postData.authorImage).size(200, 200).url()}
                     alt={"image of" + postData.name}
                 />
                 <h4>{postData.name}</h4>
                 </div>
+              </NavLink>
             </div>
         </div>
     </DefaultLayout>
