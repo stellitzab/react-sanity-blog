@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
-import BlockContent from "@sanity/block-content-to-react";
 import DefaultLayout from "./layouts/DefaultLayout.js";
 import { Link } from "react-router-dom";
 import '../styles/style.scss';
