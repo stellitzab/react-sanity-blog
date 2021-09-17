@@ -4,7 +4,7 @@
     .photo {
         max-width: 100%;
     }
-    
+
     h2 {
         color: antiquewhite;
         background-color: $header-text-color;
@@ -12,8 +12,9 @@
         padding: 0 2%;
     }
 
-    p {
+    .author-bio {
         background-color: antiquewhite;
         padding: 5%;
+        margin-top: 2%;
     }
 }

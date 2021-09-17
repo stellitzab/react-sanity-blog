@@ -241,9 +241,10 @@
   padding: 0 2%;
 }
 
-.author-page p {
+.author-page .author-bio {
   background-color: antiquewhite;
   padding: 5%;
+  margin-top: 2%;
 }
 
 body {
