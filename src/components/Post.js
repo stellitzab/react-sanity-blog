@@ -63,14 +63,12 @@ export default function Post() {
         <div className="blog-post">
             <h2>{postData.title}</h2>
             <p className="date">{date}</p>
-            <div className="content">
                 <BlockContent 
                 className="content"
                 blocks={postData.body}
                 projectId={sanityClient.config().projectId}
                 dataset={sanityClient.config().dataset}
                 />
-            </div>
             <div className="author-footer">
               <NavLink to={'/author/' + postData.name} style={{textDecoration: "none"}} className="navlink">
                 <div className="author-holder">

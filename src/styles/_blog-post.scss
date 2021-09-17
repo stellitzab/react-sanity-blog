@@ -19,6 +19,8 @@
         font-family: $body-font;
         margin-left: 5vw;
         font-size: 0.9em;
+        width: 75vw;
+        padding-right: 5%;
     }
 
     .date {
@@ -37,6 +39,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-top: -5vh;
 
         figure {
 
@@ -67,7 +70,6 @@
             }
         }
     }
-
     .author-footer {
         padding: 10px;
         border-top: solid 1px $header-text-color;
@@ -95,5 +97,5 @@
             color: #465348;
         }
     }
-    
+
 }

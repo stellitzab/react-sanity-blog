@@ -47,6 +47,8 @@
   font-family: "Kaisei Tokumin", serif;
   margin-left: 5vw;
   font-size: 0.9em;
+  width: 75vw;
+  padding-right: 5%;
 }
 
 .blog-post .date {
@@ -73,6 +75,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: -5vh;
 }
 
 .blog-post .content figure img {
@@ -245,6 +248,12 @@
   background-color: antiquewhite;
   padding: 5%;
   margin-top: 2%;
+}
+
+@media screen and (max-width: 555px) {
+  .author-page {
+    width: auto;
+  }
 }
 
 body {

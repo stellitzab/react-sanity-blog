@@ -18,3 +18,9 @@
         margin-top: 2%;
     }
 }
+
+@media screen and (max-width: 555px) {
+    .author-page {
+        width: auto;
+    }
+}
