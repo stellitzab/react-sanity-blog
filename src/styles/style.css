@@ -43,6 +43,11 @@
   margin-bottom: 0;
 }
 
+.blog-post ul {
+  font-family: "Kaisei Tokumin", serif;
+  margin-left: 5vw;
+}
+
 .blog-post .date {
   font-size: .9em;
   text-align: center;
@@ -92,12 +97,6 @@
   .blog-post .content p {
     width: 75vw;
     font-size: 0.9em;
-  }
-}
-
-@media screen and (min-width: 1050px) {
-  .blog-post .content {
-    margin: 0 8vw;
   }
 }
 
