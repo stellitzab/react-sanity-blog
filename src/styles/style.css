@@ -163,6 +163,8 @@
   text-align: center;
   background-color: antiquewhite;
   max-width: 300px;
+  -webkit-animation: fade-in 2s;
+  animation: fade-in 2s;
 }
 
 .post-grid .blog-post-card a {
@@ -189,6 +191,28 @@
           transform: translateY(-10px);
   -webkit-transition: ease-in-out .3s;
   transition: ease-in-out .3s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 body {

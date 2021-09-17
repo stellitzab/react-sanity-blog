@@ -20,6 +20,12 @@
         background-color: antiquewhite;
         max-width: 300px;
 
+        -webkit-animation: fade-in 2s;
+        -moz-animation: fade-in 2s;
+         -ms-animation: fade-in 2s;
+          -o-animation: fade-in 2s;
+             animation: fade-in 2s;
+
         a {
             color: $header-text-color;
             font-size: .7em;
@@ -43,4 +49,31 @@
             transition: ease-in-out .3s;
         }
     }
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes fade-in {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+@-moz-keyframes fade-in {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+@-ms-keyframes fade-in {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+@-o-keyframes fade-in {
+    from { opacity: 0;}
+    to { opacity: 1;}
 }
