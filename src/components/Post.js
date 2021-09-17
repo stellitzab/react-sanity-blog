@@ -70,7 +70,7 @@ export default function Post() {
                 dataset={sanityClient.config().dataset}
                 />
             <div className="author-footer">
-              <NavLink to={'/author/' + postData.name} style={{textDecoration: "none"}} className="navlink">
+              <NavLink to={'/about/' + postData.name} style={{textDecoration: "none"}} className="navlink">
                 <div className="author-holder">
                 <img className="photo"
                     src={urlFor(postData.authorImage).size(200, 200).url()}

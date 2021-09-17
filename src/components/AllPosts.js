@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import DefaultLayout from "./layouts/DefaultLayout.js";
 import '../styles/style.scss'
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+  return builder.image(source);
+}
 
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
@@ -43,7 +49,7 @@ export default function AllPosts() {
             <div className="blog-post-card">
             <Link to={"/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
-                <img src={post.mainImage.asset.url} alt="" />
+                <img src={urlFor(post.mainImage.asset).width(500).url()} alt="" />
                 <span>
                   <h2>{post.title}</h2>
                   <span className="date">{formatDate(post.publishedAt)}</span>

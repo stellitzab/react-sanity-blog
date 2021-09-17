@@ -8,6 +8,7 @@ import './styles/style.css';
 import './images/waves.svg';
 //import AllPostsByAuthor from './components/AllPostsByAuthor';
 import AuthorPage from './components/AuthorPage';
+import AboutPage from './components/AboutPage';
 
 
 
@@ -16,7 +17,8 @@ function App() {
     <BrowserRouter>
         <Route component={AllPosts} path="/" exact />
         <Route component={OnePost} path="/:slug" />
-        <Route component={AuthorPage} path="/author/:name" />
+        <Route component={AuthorPage} path="/about/:name" />
+        <Route component={AboutPage} path="/about" exact />
     </BrowserRouter>
   );
 }
