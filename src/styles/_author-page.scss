@@ -1,0 +1,19 @@
+.author-page {
+    width: 500px;
+    margin: auto;
+    .photo {
+        max-width: 100%;
+    }
+    
+    h2 {
+        color: antiquewhite;
+        background-color: $header-text-color;
+        width: fit-content;
+        padding: 0 2%;
+    }
+
+    p {
+        background-color: antiquewhite;
+        padding: 5%;
+    }
+}

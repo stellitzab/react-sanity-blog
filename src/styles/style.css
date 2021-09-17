@@ -46,6 +46,7 @@
 .blog-post ul {
   font-family: "Kaisei Tokumin", serif;
   margin-left: 5vw;
+  font-size: 0.9em;
 }
 
 .blog-post .date {
@@ -127,6 +128,9 @@
 .blog-post .author-footer h4 {
   margin: 0;
   font-family: "Kaisei Tokumin", serif;
+  text-align: center;
+  text-align: -webkit-center;
+  color: #465348;
 }
 
 .post-grid {
@@ -209,10 +213,37 @@
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
+}
+
+.author-page {
+  width: 500px;
+  margin: auto;
+}
+
+.author-page .photo {
+  max-width: 100%;
+}
+
+.author-page h2 {
+  color: antiquewhite;
+  background-color: #465348;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 2%;
+}
+
+.author-page p {
+  background-color: antiquewhite;
+  padding: 5%;
 }
 
 body {

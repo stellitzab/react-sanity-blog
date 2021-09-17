@@ -18,6 +18,7 @@
     ul {
         font-family: $body-font;
         margin-left: 5vw;
+        font-size: 0.9em;
     }
 
     .date {
@@ -89,7 +90,9 @@
         h4 {
             margin: 0;
             font-family: $body-font;
-    
+            text-align: center;
+            text-align: -webkit-center;
+            color: #465348;
         }
     }
     
