@@ -47,7 +47,6 @@
   font-family: "Kaisei Tokumin", serif;
   margin-left: 5vw;
   font-size: 0.9em;
-  width: 75vw;
   padding-right: 5%;
 }
 
@@ -75,7 +74,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: -5vh;
 }
 
 .blog-post .content figure img {
