@@ -1,3 +1,5 @@
+@import '_animations';
+
 .post-grid {
     display: flex;
     flex-wrap: wrap;
@@ -20,11 +22,11 @@
         background-color: antiquewhite;
         max-width: 300px;
 
-        -webkit-animation: fade-in 2s;
-        -moz-animation: fade-in 2s;
-         -ms-animation: fade-in 2s;
-          -o-animation: fade-in 2s;
-             animation: fade-in 2s;
+        -webkit-animation: $card-fade-in;
+        -moz-animation: $card-fade-in;
+         -ms-animation: $card-fade-in;
+          -o-animation: $card-fade-in;
+             animation: $card-fade-in;
 
         a {
             color: $header-text-color;
@@ -48,56 +50,5 @@
             transform: translateY(-10px);
             transition: ease-in-out .3s;
         }
-    }
-}
-
-@keyframes fade-in {
-    from { 
-        opacity: 0;
-        transform: translateY(-5%);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@-webkit-keyframes fade-in {
-    from { 
-        opacity: 0;
-        transform: translateY(-5%);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@-moz-keyframes fade-in {
-    from { 
-        opacity: 0;
-        transform: translateY(-5%);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@-ms-keyframes fade-in {
-    from { 
-        opacity: 0;
-        transform: translateY(-5%);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@-o-keyframes fade-in {
-    from { 
-        opacity: 0;
-        transform: translateY(-5%);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
     }
 }
