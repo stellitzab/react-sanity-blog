@@ -14,5 +14,4 @@ const DefaultLayout = ({children}) => {
         </div>
     )
 }
-
 export default DefaultLayout

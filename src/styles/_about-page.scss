@@ -1,0 +1,71 @@
+@import '_animations';
+
+.about-page {
+    width: 700px;
+    margin: 0 auto;
+
+    h2 {
+        color: antiquewhite;
+        background-color: $header-text-color;
+        width: fit-content;
+        padding: 0 2%;
+    }
+
+    .about-text {
+        background-color: antiquewhite;
+        padding: $text-content-padding;
+    }
+
+    .author-links {
+        display: flex;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    @media screen and (max-width: 400px) {
+        .author-links {
+            flex-wrap: wrap;
+            .author-img {
+                padding: 5% 0px !important;
+            }
+        }
+    }
+
+    .author-img {
+        transition: ease-out .2s;
+        padding-top: 2%;
+        text-align: center;
+        a {
+            color: antiquewhite;
+            margin-top: 5%;
+            font-size: 1.3em;
+            text-decoration: none;
+        }
+        &:hover {
+            transform: $hover-card-effect;
+            transition: ease-in-out .3s;
+        } 
+        &.malin {
+            padding-left: 0px;
+            padding-top: 2%;
+            padding-right: 1%;
+            
+        }
+        &.stella {
+            padding-left: 1%;
+        }
+    }
+}
+
+@media screen and (max-width: 779px) {
+    .about-page {
+        width: auto;
+        .author-links {
+            .author-img {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

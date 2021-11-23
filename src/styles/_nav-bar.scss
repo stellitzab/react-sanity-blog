@@ -1,0 +1,21 @@
+.nav-bar {
+    text-align: center;
+    text-align: -webkit-center;
+    width: 100%;
+    margin-top: 5vh;
+    .navlink {
+        h2 {
+            color: $header-text-color;
+            border: solid 4px $header-text-color;
+            text-decoration: none;
+            padding: .5% 1% ;
+            background-color: antiquewhite;
+            width: fit-content;
+            font-size: 1.2em;
+
+            &:hover {
+                background-color: rgb(255, 181, 71);
+            }
+        }
+    }
+}

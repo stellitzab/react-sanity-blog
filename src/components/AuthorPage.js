@@ -5,6 +5,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import DefaultLayout from "./layouts/DefaultLayout.js";
 import '../styles/style.scss';
+import { NavLink } from "react-router-dom";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -51,6 +52,11 @@ export default function AuthorPage() {
           dataset={sanityClient.config().dataset}
         />
       </div>
+      <div className="nav-bar">
+            <NavLink to='/about' className="navlink">
+                    <h2>Tillbaka</h2>
+            </NavLink>
+        </div> 
     </DefaultLayout>
   );
 }

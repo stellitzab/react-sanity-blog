@@ -4,6 +4,7 @@ import sanityClient from "../client.js";
 import DefaultLayout from "./layouts/DefaultLayout.js";
 import '../styles/style.scss'
 import imageUrlBuilder from "@sanity/image-url";
+import NavBar from "./NavBar.js";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -63,6 +64,7 @@ export default function AllPosts() {
           ))}
         </div>
       </div>
+      <NavBar />
     </DefaultLayout>
   );
 }
